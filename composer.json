@@ -8,6 +8,7 @@
     "1c"
   ],
   "license": "MIT",
+  "minimum-stability": "dev",
   "authors": [
     {
       "homepage": "http://zenwalker.ru",
