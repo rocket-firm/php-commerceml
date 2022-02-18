@@ -1,6 +1,5 @@
 {
   "name": "rocket-firm/commerceml",
-  "type": "library",
   "homepage": "https://github.com/zenwalker/php-commerceml",
   "description": "Library for parsing CommerceML files",
   "keywords": [
