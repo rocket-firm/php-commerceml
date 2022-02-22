@@ -52,6 +52,20 @@ class OfferPackage extends Simple
         return $this->offers;
     }
 
+    public function getStockrooms()
+    {
+        $result = [];
+        if (empty($this->offers) && $this->xml && $this->xml->Склады) {
+            foreach ($this->xml->Склады->Склад as $stockroom) {
+                $result[] = [
+                    'id' => strval($stockroom->Ид),
+                    'name' => strval($stockroom->Наименование),
+                ];
+            }
+        }
+        return $result;
+    }
+
     /**
      * @return Simple[]
      */

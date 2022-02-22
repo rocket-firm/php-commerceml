@@ -43,4 +43,18 @@ class Offer extends Simple
         }
         return $this->prices;
     }
+
+    public function getStockrooms()
+    {
+        $result = [];
+        if ($this->xml) {
+            foreach ($this->xml->Склад as $stockroom){
+                $result[] = [
+                    'id' => strval($stockroom['ИдСклада']),
+                    'count' => intval($stockroom['КоличествоНаСкладе'])
+                ];
+            }
+        }
+        return $result;
+    }
 }
