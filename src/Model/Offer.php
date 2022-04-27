@@ -51,7 +51,7 @@ class Offer extends Simple
             foreach ($this->xml->Склад as $stockroom){
                 $result[] = [
                     'id' => strval($stockroom['ИдСклада']),
-                    'count' => intval($stockroom['КоличествоНаСкладе'])
+                    'count' => doubleval($stockroom['КоличествоНаСкладе'])
                 ];
             }
         }
